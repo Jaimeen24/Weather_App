@@ -1,0 +1,6 @@
+.WeatherShow {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
