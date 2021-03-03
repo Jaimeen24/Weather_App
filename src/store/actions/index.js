@@ -1,4 +1,3 @@
 export {
-    fetchWeatherData,
-    set_searchValue
+    fetchWeatherData
 } from './weatherData';

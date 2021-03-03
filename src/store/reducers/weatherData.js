@@ -17,13 +17,6 @@ const fetchweatherDataSuccess = ( state, action ) => {
         loading: false
     } );
 };
-const set_searchValue=(state,action)=>{
-    return updateObject(state,{
-        searchValue:action.data
-    }
-
-    )
-}
 
 const fetchweatherDataFail = ( state, action ) => {
     return updateObject( state, { loading: false } );
@@ -34,7 +27,6 @@ const reducer = ( state = initialState, action ) => {
         case actionTypes.FETCH_WEATHERDATA_START: return fetchweatherDataStart( state, action );
         case actionTypes.FETCH_WEATHERDATA_SUCCESS: return fetchweatherDataSuccess( state, action );
         case actionTypes.FETCH_WEATHERDATA_FAIL: return fetchweatherDataFail( state, action );
-        case actionTypes.SET_DATA: return   set_searchValue( state, action );
         default: return state;
     }
 };

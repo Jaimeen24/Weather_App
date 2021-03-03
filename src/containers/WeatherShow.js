@@ -49,16 +49,13 @@ class Weathershow extends Component {
 const mapStateToProps = state => {
     return {
         dailyData : state.dailyData,
-        zipcode: state.zipcode,
-        searchValue:state.searchValue
+        zipcode: state.zipcode
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        onfetchWeatherData : (zipcode) => dispatch(actions.fetchWeatherData(zipcode)),
-        onset_searchValue:(e)=>dispatch(actions.set_searchValue(e))
-
+        onfetchWeatherData : (zipcode) => dispatch(actions.fetchWeatherData(zipcode))
     }
 }
 

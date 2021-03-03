@@ -14,12 +14,6 @@ export const fetchWeatherDataFail = ( error ) => {
         error: error
     };
 };
-export const set_searchValue=(data)=>{
-    return{
-        type:actionTypes.SET_DATA,
-         data:data
-    }
-}
 
 export const fetchWeatherDataStart = () => {
     return {
@@ -29,7 +23,6 @@ export const fetchWeatherDataStart = () => {
 
 export const fetchWeatherData = (zipcode) => {
     return dispatch => {
-        console.log("00",zipcode,"00");
         dispatch(fetchWeatherDataStart(zipcode));
         const queryParams = '?zip=' + zipcode + ',IN&appid=8e333704be69bb431beb520f7e781ad9';
         axios.get( '/forecast' +  queryParams)
